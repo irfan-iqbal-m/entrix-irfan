@@ -33,6 +33,9 @@
                         <th width="10%" class="text-center">
                             Task Status
                         </th>
+                        <th width="10%" class="text-center">
+                            Assined To
+                        </th>
                         <th width="20%" class="text-center">
                             Action
                         </th>
@@ -43,6 +46,7 @@
                     <tr>
                         <th>{{ $task->id }}</th>
                         <td>{{ $task->title }}</td>
+                        <td>{{ $task->user->name }}</td>
                         <td>
                             {{ $task->status }}
                         </td>
