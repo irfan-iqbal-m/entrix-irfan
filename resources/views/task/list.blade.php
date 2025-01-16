@@ -31,11 +31,12 @@
                         <th width="5%">#</th>
                         <th>Task Name</th>
                         <th width="10%" class="text-center">
-                            Task Status
-                        </th>
-                        <th width="10%" class="text-center">
                             Assined To
                         </th>
+                        <th width="10%" class="text-center">
+                            Task Status
+                        </th>
+
                         <th width="20%" class="text-center">
                             Action
                         </th>
