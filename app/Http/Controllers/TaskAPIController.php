@@ -12,10 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class TaskAPIController extends Controller
 {
    
-    public function __construct()
-    {
-        $this->middleware('auth:sanctum');
-    }
+    
 
     public function login(Request $request)
     {
@@ -75,7 +72,7 @@ class TaskAPIController extends Controller
             'status' => 'required|in:Pending,In Progress,Completed',
         ]);
 
-        if (Auth::user()->role !== 'Admin' && $task->user_id !== Auth::id()) {
+        if (Auth::user()->role !== 'Admin') {
             return response()->json(['message' => 'Unauthorized'], 403);
         }
 

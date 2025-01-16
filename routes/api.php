@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
-
+Route::post('/login2', [TaskAPIController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
     // Task management routes
